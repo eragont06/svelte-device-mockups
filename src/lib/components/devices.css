@@ -1,27 +1,3 @@
-.device {
-    position: relative;
-    margin: 20px;
-    overflow: hidden;
-    background: #fff;
-    border: 1px solid #ccc;
-  }
-  
-  .device .screen-container {
-    position: absolute;
-    overflow: hidden;
-  }
-  
-  .device .screen {
-    border: none;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .device.landscape {
-    transform: rotate(90deg);
-    transform-origin: center;
-  }
-  
   .iphone-x {
     border-radius: 36px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
