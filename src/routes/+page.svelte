@@ -1,6 +1,20 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-its is super device mockup
+<script>
+	import DeviceMockup from '$lib/components/DeviceMockup.svelte';
+</script>
 
-<p>YEss</p>
+
+	<DeviceMockup device="MacBook Pro" color="gold" src="http://localhost:18080/convertigo/projects/QuestHunter/DisplayObjects/mobile/index.html">
+	</DeviceMockup>
+
+
+
+
+<style>
+	.flex-center-col {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+</style>
