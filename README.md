@@ -1,58 +1,68 @@
-# create-svelte
+svelte-device-mockups
+svelte-device-mockups is a Svelte component library that provides device mockups for displaying content within various device frames. This is useful for showcasing mobile or web applications within a device context.
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Installation
+First, install the library using npm:
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+bash
+Copy code
+npm install svelte-device-mockups
+Usage
+Import the DeviceMockup component into your Svelte application and use it with the appropriate props.
 
-## Creating a project
+Example
+svelte
+Copy code
+<script>
+  import DeviceMockup from 'svelte-device-mockups';
+</script>
 
-If you're seeing this, you've probably already done this step. Congrats!
+<DeviceMockup 
+  device="iPhone X" 
+  scale={4} 
+  landscape={false} 
+  deviceColor="gold" 
+  src="http://localhost:18080/convertigo/projects/QuestHunter/DisplayObjects/mobile/index.html">
+</DeviceMockup>
+Props
+device: The type of device to be displayed. Supported values include:
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+"iPhone X"
+"iPhone 8plus"
+"Note 8"
+"iPad"
+"MacBook Pro"
+deviceColor: The color of the device. Supported values include:
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+"black"
+"silver"
+"gold"
+"blue"
+"red"
+"yellow"
+"green"
+Defaults to "silver" if not specified or if an invalid color is provided.
+landscape: A boolean indicating whether the device should be displayed in landscape orientation. Defaults to false.
 
-## Developing
+scale: A number between 1 and any positive value that determines the size of the device mockup. A value of 5 corresponds to the original size (1:1). For values between 1 and 5, the size scales proportionally (e.g., 1 corresponds to 20% of the original size). Values greater than 5 increase the size linearly beyond the original size. Defaults to 1.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+src: The URL of the content to be displayed inside the device mockup. If not provided, the content inside the <DeviceMockup> component will be displayed.
 
-```bash
-npm run dev
+Example with Slot Content
+If you prefer to use slot content instead of an iframe, simply omit the src prop and place your content inside the <DeviceMockup> component.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+svelte
+Copy code
+<script>
+  import DeviceMockup from 'svelte-device-mockups';
+</script>
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+<DeviceMockup 
+  device="iPad" 
+  scale={3} 
+  landscape={true} 
+  deviceColor="black">
+  <div>Your custom content here</div>
+</DeviceMockup>
+License
+MIT
