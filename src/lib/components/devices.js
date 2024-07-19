@@ -6,12 +6,12 @@ export const DeviceOptions = {
       width: 375,
       height: 812
     },
-    "iPhone 8": {
-      device: "iphone8",
-      colors: ["black", "silver", "gold"],
+    "Note 8": {
+      device: "note8",
+      colors: ["black"],
       hasLandscape: true,
-      width: 375,
-      height: 667
+      width: 360,
+      height: 740
     },
     "iPad": {
       device: "ipad",
@@ -29,5 +29,56 @@ export const DeviceOptions = {
     }
   };
   
-  export const DeviceNames = Object.keys(DeviceOptions);
+  export const DeviceHTML = {
+    "iPhone X": `
+      <div class="marvel-device iphone-x">
+        <div class="notch">
+          <div class="camera"></div>
+          <div class="speaker"></div>
+        </div>
+        <div class="top-bar"></div>
+        <div class="sleep"></div>
+        <div class="bottom-bar"></div>
+        <div class="volume"></div>
+        <div class="overflow">
+          <div class="shadow shadow--tr"></div>
+          <div class="shadow shadow--tl"></div>
+          <div class="shadow shadow--br"></div>
+          <div class="shadow shadow--bl"></div>
+        </div>
+        <div class="inner-shadow"></div>
+        <div class="screen"></div>
+      </div>
+    `,
+    "Note 8": `
+      <div class="marvel-device note8">
+        <div class="inner"></div>
+        <div class="overflow">
+          <div class="shadow"></div>
+        </div>
+        <div class="speaker"></div>
+        <div class="sensors"></div>
+        <div class="more-sensors"></div>
+        <div class="sleep"></div>
+        <div class="volume"></div>
+        <div class="camera"></div>
+        <div class="screen"></div>
+      </div>
+    `,
+    "iPad": `
+      <div class="marvel-device ipad ">
+        <div class="camera"></div>
+        <div class="screen"></div>
+        <div class="home"></div>
+      </div>
+    `,
+    "MacBook Pro": `
+      <div class="marvel-device macbook">
+        <div class="top-bar"></div>
+        <div class="camera"></div>
+        <div class="screen"></div>
+        <div class="bottom-bar"></div>
+      </div>
+    `
+  };
   
