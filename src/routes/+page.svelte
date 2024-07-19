@@ -11,10 +11,10 @@
 <div class="container">
 	<button class="button-land" on:click={() => toggleLandscape(landscape)}>landscape</button>
 	<DeviceMockup
-		device="iPhone X"
+		device="iPad"
 		{landscape}
 		scale="5"
-		deviceColor="gold"
+		deviceColor="yellow"
 		src="http://localhost:18080/convertigo/projects/QuestHunter/DisplayObjects/mobile/index.html"
 	></DeviceMockup>
 </div>

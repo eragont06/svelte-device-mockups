@@ -46,7 +46,7 @@
 	</div>
 {:else if device === 'iPhone 8plus'}
 	<div
-		class={`marvel-device iphone8plus ${selectedColor}`}
+		class={`marvel-device iphone8plus ${landscape ? 'landscape' : ''} ${selectedColor}`}
 		style="transform: scale({mappedScale});"
 	>
 		<div class="top-bar"></div>
@@ -89,7 +89,7 @@
 		<div class="bottom-bar"></div>
 	</div>
 {:else if device === 'iPhone 5c'}
-	<div class={`marvel-device iphone5c ${selectedColor}`} style="transform: scale({mappedScale});">
+	<div class={`marvel-device iphone5c ${landscape ? 'landscape' : ''} ${selectedColor}`} style="transform: scale({mappedScale});">
 		<div class="top-bar"></div>
 		<div class="sleep"></div>
 		<div class="volume"></div>
@@ -108,7 +108,7 @@
 		<div class="bottom-bar"></div>
 	</div>
 {:else if device === 'Note 8'}
-	<div class={`marvel-device note8 ${selectedColor}`} style="transform: scale({mappedScale});">
+	<div class={`marvel-device note8 ${landscape ? 'landscape' : ''} ${selectedColor}`} style="transform: scale({mappedScale});">
 		<div class="inner"></div>
 		<div class="overflow">
 			<div class="shadow"></div>
@@ -129,7 +129,7 @@
 		{/if}
 	</div>
 {:else if device === 'iPad'}
-	<div class={`marvel-device ipad ${selectedColor}`} style="transform: scale({mappedScale});">
+	<div class={`marvel-device ipad ${landscape ? 'landscape' : ''} ${selectedColor}`} style="transform: scale({mappedScale});">
 		<div class="camera"></div>
 		{#if src}
 			<div class="screen">
@@ -142,7 +142,7 @@
 		<div class="home"></div>
 	</div>
 {:else if device === 'MacBook Pro'}
-	<div class={`marvel-device macbook ${selectedColor}`} style="transform: scale({mappedScale});">
+	<div class={`marvel-device macbook ${landscape ? 'landscape' : ''} ${selectedColor}`} style="transform: scale({mappedScale});">
 		<div class="top-bar"></div>
 		<div class="camera"></div>
 		{#if src}
