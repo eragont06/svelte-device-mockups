@@ -1,7 +1,7 @@
 svelte-device-mockups
 svelte-device-mockups is a Svelte component library that provides device mockups for displaying content within various device frames. This is useful for showcasing mobile or web applications within a device context.
 
-Installation
+##Installation
 First, install the library using npm:
 
 bash
@@ -16,7 +16,7 @@ Copy code
 <script>
   import DeviceMockup from 'svelte-device-mockups';
 </script>
-
+bash
 <DeviceMockup 
   device="iPhone X" 
   scale={4} 
