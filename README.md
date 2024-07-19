@@ -74,4 +74,8 @@ If you prefer to use slot content instead of an iframe, simply omit the src prop
   src="http://localhost:18080/">
   <div>Your custom content here</div>
 </DeviceMockup>
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 6279e08 (landscape fonctionality fixed, devices models added)
