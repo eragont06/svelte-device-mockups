@@ -11,7 +11,7 @@
 <div class="container">
 	<button class="button-land" on:click={() => toggleLandscape(landscape)}>landscape</button>
 	<DeviceMockup
-		device="Samsung Galaxy S5"
+		device="iPhone 5s"
 		{landscape}
 		scale="5"
 		deviceColor="yellow"

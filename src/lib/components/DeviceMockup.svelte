@@ -90,7 +90,7 @@
 	</div>
 {:else if device === 'iPhone 5s'}
 	<div
-		class={`marvel-device iphone5s silver ${selectedColor}`}
+		class={`marvel-device iphone5s silver ${landscape ? 'landscape' : ''} ${selectedColor}`}
 		style="transform: scale({mappedScale});"
 	>
 		<div class="top-bar"></div>
@@ -195,7 +195,7 @@
 		<div class="home"></div>
 	</div>
 {:else if device === 'HTC one'}
-	<div class={`marvel-device htc-one`}>
+	<div class={`marvel-device htc-one ${landscape ? 'landscape' : ''} ${selectedColor}`}>
 		<div class="top-bar"></div>
 		<div class="camera"></div>
 		<div class="sensor"></div>
