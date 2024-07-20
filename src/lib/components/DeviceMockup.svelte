@@ -44,6 +44,28 @@
 			<div class="screen"><slot></slot></div>
 		{/if}
 	</div>
+{:else if device === 'iPhone 8'}
+	<div
+		class={`marvel-device iphone8 silver ${landscape ? 'landscape' : ''} ${selectedColor}`}
+		style="transform: scale({mappedScale});"
+	>
+		<div class="top-bar"></div>
+		<div class="sleep"></div>
+		<div class="volume"></div>
+		<div class="camera"></div>
+		<div class="sensor"></div>
+		<div class="speaker"></div>
+		{#if src}
+			<div class="screen">
+				<!-- svelte-ignore a11y-missing-attribute -->
+				<iframe {src} class="screen" frameborder="0"></iframe>
+			</div>
+		{:else}
+			<div class="screen"><slot></slot></div>
+		{/if}
+		<div class="home"></div>
+		<div class="bottom-bar"></div>
+	</div>
 {:else if device === 'iPhone 8plus'}
 	<div
 		class={`marvel-device iphone8plus ${landscape ? 'landscape' : ''} ${selectedColor}`}
@@ -89,7 +111,10 @@
 		<div class="bottom-bar"></div>
 	</div>
 {:else if device === 'iPhone 5c'}
-	<div class={`marvel-device iphone5c ${landscape ? 'landscape' : ''} ${selectedColor}`} style="transform: scale({mappedScale});">
+	<div
+		class={`marvel-device iphone5c ${landscape ? 'landscape' : ''} ${selectedColor}`}
+		style="transform: scale({mappedScale});"
+	>
 		<div class="top-bar"></div>
 		<div class="sleep"></div>
 		<div class="volume"></div>
@@ -108,7 +133,10 @@
 		<div class="bottom-bar"></div>
 	</div>
 {:else if device === 'Note 8'}
-	<div class={`marvel-device note8 ${landscape ? 'landscape' : ''} ${selectedColor}`} style="transform: scale({mappedScale});">
+	<div
+		class={`marvel-device note8 ${landscape ? 'landscape' : ''} ${selectedColor}`}
+		style="transform: scale({mappedScale});"
+	>
 		<div class="inner"></div>
 		<div class="overflow">
 			<div class="shadow"></div>
@@ -128,8 +156,82 @@
 			<div class="screen"><slot></slot></div>
 		{/if}
 	</div>
+{:else if device === 'Nexus 5'}
+	<div
+		class={`marvel-device nexus5 ${landscape ? 'landscape' : ''} ${selectedColor}`}
+		style="transform: scale({mappedScale});"
+	>
+		<div class="top-bar"></div>
+		<div class="sleep"></div>
+		<div class="volume"></div>
+		<div class="camera"></div>
+		{#if src}
+			<div class="screen">
+				<!-- svelte-ignore a11y-missing-attribute -->
+				<iframe {src} class="screen" frameborder="0"></iframe>
+			</div>
+		{:else}
+			<div class="screen"><slot></slot></div>
+		{/if}
+	</div>
+{:else if device === 'Samsung Galaxy S5'}
+	<div
+		class={`marvel-device s5 white ${landscape ? 'landscape' : ''} ${selectedColor}`}
+		style="transform: scale({mappedScale});"
+	>
+		<div class="top-bar"></div>
+		<div class="sleep"></div>
+		<div class="camera"></div>
+		<div class="sensor"></div>
+		<div class="speaker"></div>
+		{#if src}
+			<div class="screen">
+				<!-- svelte-ignore a11y-missing-attribute -->
+				<iframe {src} class="screen" frameborder="0"></iframe>
+			</div>
+		{:else}
+			<div class="screen"><slot></slot></div>
+		{/if}
+		<div class="home"></div>
+	</div>
+{:else if device === 'HTC one'}
+	<div class={`marvel-device htc-one`}>
+		<div class="top-bar"></div>
+		<div class="camera"></div>
+		<div class="sensor"></div>
+		<div class="speaker"></div>
+		{#if src}
+			<div class="screen">
+				<!-- svelte-ignore a11y-missing-attribute -->
+				<iframe {src} class="screen" frameborder="0"></iframe>
+			</div>
+		{:else}
+			<div class="screen"><slot></slot></div>
+		{/if}
+	</div>
+{:else if device === 'Lumia 920'}
+	<div
+		class={`marvel-device lumia920 yellow ${landscape ? 'landscape' : ''} ${selectedColor}`}
+		style="transform: scale({mappedScale});"
+	>
+		<div class="top-bar"></div>
+		<div class="volume"></div>
+		<div class="camera"></div>
+		<div class="speaker"></div>
+		{#if src}
+			<div class="screen">
+				<!-- svelte-ignore a11y-missing-attribute -->
+				<iframe {src} class="screen" frameborder="0"></iframe>
+			</div>
+		{:else}
+			<div class="screen"><slot></slot></div>
+		{/if}
+	</div>
 {:else if device === 'iPad'}
-	<div class={`marvel-device ipad ${landscape ? 'landscape' : ''} ${selectedColor}`} style="transform: scale({mappedScale});">
+	<div
+		class={`marvel-device ipad ${landscape ? 'landscape' : ''} ${selectedColor}`}
+		style="transform: scale({mappedScale});"
+	>
 		<div class="camera"></div>
 		{#if src}
 			<div class="screen">
@@ -142,7 +244,10 @@
 		<div class="home"></div>
 	</div>
 {:else if device === 'MacBook Pro'}
-	<div class={`marvel-device macbook ${landscape ? 'landscape' : ''} ${selectedColor}`} style="transform: scale({mappedScale});">
+	<div
+		class={`marvel-device macbook ${landscape ? 'landscape' : ''} ${selectedColor}`}
+		style="transform: scale({mappedScale});"
+	>
 		<div class="top-bar"></div>
 		<div class="camera"></div>
 		{#if src}
