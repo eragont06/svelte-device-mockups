@@ -32,6 +32,12 @@ Props device:
  - "iPhone X"
  - "iPhone 8plus"
  - "Note 8"
+ - "iPhone 5s"
+ - "iPhone 5c"
+ - "Nexus 5"
+ - "Samsung Galaxy S5"
+ - "HTC One"
+ - "Lumia 920"
  - "iPad"
  - "MacBook Pro"
 
@@ -48,6 +54,7 @@ deviceColor:
  - "green"
    
 > Defaults to "silver" if not specified or if an invalid color is provided.
+> Not all devices support all available colors.
 
 landscape:
 >A boolean indicating whether the device should be displayed in landscape orientation. Defaults to false.

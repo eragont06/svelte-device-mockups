@@ -1,6 +1,6 @@
 {
 	"name": "svelte-device-mockups",
-	"version": "0.0.9",
+	"version": "0.1.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -27,6 +27,9 @@
 	"peerDependencies": {
 		"svelte": "^4.0.0"
 	},
+	"author": "Eragont06",
+    "license": "MIT",
+	"homepage": "https://github.com/eragont06/svelte-device-mockups?tab=readme-ov-file",
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
