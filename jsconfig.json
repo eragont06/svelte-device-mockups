@@ -1,12 +1,18 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext"
-	}
-}
+	  "esModuleInterop": true,
+	  "forceConsistentCasingInFileNames": true,
+	  "resolveJsonModule": true,
+	  "skipLibCheck": true,
+	  "sourceMap": true,
+	  "module": "NodeNext",
+	  "moduleResolution": "NodeNext",
+	  "baseUrl": ".", // Assurez-vous que le baseUrl est correct
+	  "paths": {
+		"svelte-device-mockups": ["node_modules/svelte-device-mockups/dist"]
+	  }
+	},
+	"include": ["src/**/*", "node_modules/svelte-device-mockups/dist/index.d.ts"]
+  }
+  

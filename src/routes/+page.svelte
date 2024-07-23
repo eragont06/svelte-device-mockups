@@ -19,6 +19,20 @@
 	></DeviceMockup>
 </div>
 
+Hello 
+
+
+<DeviceMockup
+device="MacBook Pro"
+scale={5}
+src="http://localhost:18080/convertigo/projects/QuestHunter/DisplayObjects/mobile/index.html"
+>
+
+</DeviceMockup>
+
+
+
+
 <style>
 	.container {
 		display: flex;
