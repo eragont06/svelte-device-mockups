@@ -6,6 +6,7 @@ declare module 'svelte-device-mockups' {
       color?: string;
       landscape?: boolean;
       src?: string;
+      scale?: number | string;
     }> {}
   }
   
